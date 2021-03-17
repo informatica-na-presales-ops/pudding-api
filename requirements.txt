@@ -1,7 +1,7 @@
 --extra-index-url https://alpine-wheels.github.io/index
 
 APScheduler==3.7.0
-elastic-apm==5.10.1
+elastic-apm==6.0.0
 fort==1.0.1
 psycopg2==2.8.6
 requests==2.25.1
