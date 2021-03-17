@@ -5,7 +5,7 @@ RUN /sbin/apk add --no-cache libpq
 COPY requirements.txt /pudding-api/requirements.txt
 RUN /usr/local/bin/pip install --no-cache-dir --requirement /pudding-api/requirements.txt
 
-ENV APP_VERSION="2021.0" \
+ENV APP_VERSION="2021.1" \
     PYTHONUNBUFFERED="1"
 
 COPY get-data.py /pudding-api/get-data.py
