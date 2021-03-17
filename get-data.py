@@ -320,6 +320,7 @@ def get_workspaces(s: requests.Session):
 
 
 def main_job():
+    log.info('Getting all data from Pudding')
     db = Database(os.getenv('DB'))
     s = requests.Session()
     token = os.getenv('PUDDING_TOKEN')
@@ -376,6 +377,7 @@ def main_job():
                     c.update({'assignees': ' '.join([a.get('id') for a in c.get('assignees')])})
                     db.add_success_criteria(c)
                     db.add_status(c.get('status'))
+    log.info('Done getting all data from Pudding')
 
 
 def main():
