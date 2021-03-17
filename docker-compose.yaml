@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  pudding-api:
+    build: .
+    image: ghcr.io/informatica-na-presales-ops/pudding-api
+    init: true
+    environment:
+      DB:
+      PUDDING_DOMAIN:
+      PUDDING_TOKEN:

@@ -1,0 +1,89 @@
+GET http://pra01-api.pudding.app/v1/{{domain}}/public/attachments
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+GET http://pra01-api.pudding.app/v1/{{domain}}/public/competitors
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+GET http://pra01-api.pudding.app/v1/{{domain}}/public/contacts?filter[parent_type]=Customer&filter[parent_id]={{customer-id}}
+# parent_type should be 'Customer' or 'Partner'
+Authorization: Bearer {{token}}
+
+###
+
+GET http://pra01-api.pudding.app/v1/{{domain}}/public/customers
+Authorization: Bearer {{token}}
+
+###
+
+GET http://pra01-api.pudding.app/v1/{{domain}}/public/partners
+Authorization: Bearer {{token}}
+
+###
+
+GET https://pra01-api.pudding.app/v1/{{domain}}/public/projects?filter[workspace_id]={{workspace-id}}&include=competitors,tags,territories
+# Allowed include(s) are:
+#  customer, customerCount, partner, partnerCount, territories, territoriesCount, stage, stageCount, tags, tagsCount,
+#  competitors, competitorsCount, strategies, strategiesCount, usecasesOpen, usecasesOpenCount, usecasesClosed,
+#  usecasesClosedCount, usecases, usecasesCount, tasks, tasksCount, tasksPending, tasksPendingCount, tasksCompleted,
+#  tasksCompletedCount, workspace, workspaceCount
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+GET https://pra01-api.pudding.app/v1/{{domain}}/public/projects/{{project-id}}
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+GET http://pra01-api.pudding.app/v1/{{domain}}/public/results
+Authorization: Bearer {{token}}
+
+###
+
+GET http://pra01-api.pudding.app/v1/{{domain}}/public/stages?filter[workspace_id]={{workspace-id}}
+Authorization: Bearer {{token}}
+
+###
+
+GET http://pra01-api.pudding.app/v1/{{domain}}/public/tags?filter[type]=label
+# type should be 'label' or 'product' or 'platform'
+Authorization: Bearer {{token}}
+
+###
+
+GET http://pra01-api.pudding.app/v1/{{domain}}/public/tasks?filter[project_id]={{project-id}}&include=assignees,milestone.assignees
+Authorization: Bearer {{token}}
+
+###
+
+GET http://pra01-api.pudding.app/v1/{{domain}}/public/territories
+Authorization: Bearer {{token}}
+
+###
+
+GET http://pra01-api.pudding.app/v1/{{domain}}/public/testcases
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+GET http://pra01-api.pudding.app/v1/{{domain}}/public/usecases?filter[project_id]={{project-id}}&include=assignees,success_criteria.status,success_criteria.assignees,testcases.assignees,testcases.status
+Authorization: Bearer {{token}}
+
+###
+
+GET http://pra01-api.pudding.app/v1/{{domain}}/public/users
+Authorization: Bearer {{token}}
+
+###
+
+GET https://pra01-api.pudding.app/v1/{{domain}}/public/workspaces
+Authorization: Bearer {{token}}
