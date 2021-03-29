@@ -224,7 +224,7 @@ class Database(fort.PostgresDatabase):
 
 def get_data(s: requests.Session, data_type: str, params: dict = None):
     domain = os.getenv('PUDDING_DOMAIN')
-    url = f'https://pra01-api.pudding.app/v1/{domain}/public/{data_type}'
+    url = f'https://pra01-api.success.app/v1/{domain}/public/{data_type}'
     while True:
         response = s.get(url, params=params)
         response.raise_for_status()
